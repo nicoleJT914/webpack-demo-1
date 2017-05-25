@@ -14,7 +14,8 @@ var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 module.exports = {
   entry: './dist/bundle.js',
   output: {
-    filename: './dist/bundle-min.js'
+    filename: 'bundle-min.js',
+    path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new uglifyJsPlugin({
